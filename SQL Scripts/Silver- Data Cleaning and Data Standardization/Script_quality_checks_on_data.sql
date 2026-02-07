@@ -1,4 +1,6 @@
 -- Validity and quality checks
+-- Validity and quality checks
+This script mentions all the quality checks that are performed on columns of differnet data to identify the potential issues that require data cleaning.
 
 --=====================================================
 --   Table - customer_zip_code_prefix
@@ -367,4 +369,5 @@ SELECT geolocation_state, COUNT(*) AS location
 FROM bronze.olist_geolocation
 GROUP BY geolocation_state
 ORDER BY location DESC;
+
 
