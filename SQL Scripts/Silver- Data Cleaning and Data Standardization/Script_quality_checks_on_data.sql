@@ -367,3 +367,4 @@ SELECT geolocation_state, COUNT(*) AS location
 FROM bronze.olist_geolocation
 GROUP BY geolocation_state
 ORDER BY location DESC;
+
