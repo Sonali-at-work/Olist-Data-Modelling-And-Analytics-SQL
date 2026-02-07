@@ -1,0 +1,36 @@
+--Answering business problems using the Olist Data Warehouse dataset
+
+
+--3. Forecasting Orders and Revenue
+--Problem: Predict future monthly orders and revenue to optimize inventory and staffing.
+--	• Objective: Support operational planning and supply chain management.
+--	• Dataset: orders, order_items
+--	• Analysis type: Time series forecasting (ARIMA, Prophet, or moving averages)
+--	• Example Insight: “Next month’s revenue is forecasted to grow 12% based on seasonal trends.”
+--give growth rate
+with t as (select  year(order_purchase_timestamp) as year ,month(order_purchase_timestamp)as month,sum(price) as revenue
+from gold.fact_orders o join gold.fact_order_items oi on o.order_id=oi.order_id 
+where order_status='delivered' group by month(order_purchase_timestamp), year(order_purchase_timestamp) 
+)
+
+,growth as (select *,lag(revenue) over(order by year,month ) as previous_month_revenue from t)
+
+select avg(pct_growth_from_previous_month) as growth_rate from (
+select *,(revenue-previous_month_revenue)/NULLIF(previous_month_revenue, 0) as pct_growth_from_previous_month from growth
+)s
+
+
+--MOM analysis
+
+with t as (select  year(order_purchase_timestamp) as year ,month(order_purchase_timestamp)as month,sum(price) as revenue
+from gold.fact_orders o join gold.fact_order_items oi on o.order_id=oi.order_id 
+where order_status='delivered' group by month(order_purchase_timestamp), year(order_purchase_timestamp) 
+)
+
+,growth as (select *,lag(revenue) over(order by year,month ) as previous_month_revenue from t)
+
+
+select *,(revenue-previous_month_revenue)/NULLIF(previous_month_revenue, 0) as pct_growth_from_previous_month from growth
+
+
+
