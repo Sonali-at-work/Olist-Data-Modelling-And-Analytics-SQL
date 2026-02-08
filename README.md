@@ -282,3 +282,36 @@ select *,
 
 #### Insights:  Based on output screeenshot Sao Paulo and Rio De Janeiro contribute 50 % of total Revenue .
 
+### 4. Product & Category Performance
+- Problem: Identify best-selling products and categories, and products with high returns or low reviews.
+- Objective: Improve inventory decisions, reduce returns, and enhance product quality.
+```
+with t as (
+          select p.product_category,
+                  count( distinct o.order_id)as order_count,
+                  sum(oi.price) as revenue_by_product,
+                 COUNT(*) AS units_sold  
+         from  gold.fact_orders o
+                   join gold.fact_order_items oi on o.order_id=oi.order_id 
+                   join gold.dim_products p on oi.product_key=p.product_key 
+                   join gold.fact_reviews r on r.order_id = o.order_id
+                   where o.order_status='delivered' and customer_key is not null 
+                   group by p.product_category )
+
+select product_category,
+        order_count,revenue_by_product,
+    -- % contribution
+     round(100 * revenue_by_product/sum(revenue_by_product) over(),2) as pct_revenue_product,
+     -- cumulative share (Pareto)
+     ROUND(
+           100.0 * SUM(revenue_by_product) OVER (
+           ORDER BY revenue_by_product DESC
+           ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+           ) / SUM(revenue_by_product) OVER (), 2
+         ) AS cumulative_pct
+      from t order by revenue_by_product desc
+```
+<img src="Docs/Regional Sales Analysis.png" width="600" height="500">
+
+#### Insights:  Based on output screeenshot Sao Paulo and Rio De Janeiro contribute 50 % of total Revenue .
+
