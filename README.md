@@ -39,15 +39,17 @@ data-warehouse-project/
 │
 ├── SQL scripts/
 │   ├── Bronze- Raw data Loading/                            # Scripts for extracting and loading raw data Data Ingestion Raw Copy
-│   │    ├── DDL_Script_Creating_Tables_and_Loading_Data
+│   │    └── DDL_Script_Creating_Tables_and_Loading_Data
+│   │
 │   ├── Silver- Data Cleaning and Data Standardization/     # Scripts for cleaning and transforming data
 │   │    ├──DDL_Script .sql
 │   │    ├──Script_quality_checks_on_data .sql
 │   │    ├──Stored Procedure for data Cleaning .sql
-│   │    ├──Tableas available and reationship between them .png
+│   │    └──Tableas available and reationship between them .png
+│   │
 │   └── Gold- Data Modelling(Dimension and facts)/                       # Scripts for creating analytical models
-│        └──Creating Fact and Dimension Tables .sql
-│        └──Quality checks on the data Model created
+│        ├──Creating Fact and Dimension Tables .sql
+│        ├──Quality checks on the data Model created
 │        └──Schema.png
 │
 ├── README.md                       # Project overview and instructions
