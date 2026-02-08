@@ -181,10 +181,10 @@ Each fact table maintains a clearly defined grain and references dimensions via 
 ### Relationships & Grain Alignment
 
 Orders act as a central business process linking:
-Customers
-Order items
-Payments
-Reviews
+Customers ,
+Order items ,
+Payments ,
+Reviews.
 Order items connect products and sellers at the most detailed transactional level.
 Dimensions are never joined directly to each other — joined only through facts.
 Surrogate keys are used only in dimensions and facts, never in the Silver layer.
