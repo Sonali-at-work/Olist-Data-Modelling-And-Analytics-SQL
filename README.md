@@ -123,6 +123,7 @@ Dimensions store descriptive attributes and use surrogate keys for analytical jo
 ### 1. gold.dim_customers
 
 Grain: One row per customer
+
 Surrogate Key: customer_key
 Business Key: customer_id
 Attributes:Customer identifiers, Geographic details (city, state, zip)
