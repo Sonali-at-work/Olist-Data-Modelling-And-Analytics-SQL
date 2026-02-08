@@ -253,7 +253,32 @@ select avg(pct_growth_from_previous_month) as growth_rate from (
                                from growth )s
 
 ```
-<img src="Docs/LTV.png" width="600" height="500">
+<img src="Docs/Forecasting sales and Revenue.png" width="600" height="500">
+
+#### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
+
+### 4. Regional Sales Analysis
+- Problem: Which regions/states generate the highest revenue and number of orders?
+- Objective: Optimize marketing campaigns and logistics in high-performing regions.
+- Analysis type: Descriptive, geospatial
+```
+with t as (
+           select c.customer_state,
+                  count(distinct o.order_id)as no_of_orders,
+                  sum(oi.price) as revenue
+                  from gold.fact_orders o
+                  join gold.fact_order_items oi
+                  on o.order_id=oi.order_id 
+                  join gold.dim_customers c
+                  on o.customer_key =c.customer_key
+                  where order_status='delivered' and o.customer_key is not null 
+                  group by c.customer_state  )
+
+select *,
+        100 * revenue/sum(revenue) over () as pct_revenue
+        from t order by pct_revenue desc
+```
+<img src="Docs/Forecasting sales and Revenue.png" width="600" height="500">
 
 #### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
 
