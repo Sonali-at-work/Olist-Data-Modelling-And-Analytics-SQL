@@ -94,9 +94,8 @@ This repository showcases expertise in:
 - Analytics & Reporting  
 
 ---
-<img src="SQL Scripts/Silver- Data Cleaning and Data Standardization/Tables available and relationship between them.png" width="600">
+<img src="SQL Scripts/Silver- Data Cleaning and Data Standardization/Tables available and relationship between them.png" width="600" height="400">
 
-![Alt text](SQL Scripts/Silver- Data Cleaning and Data Standardization/Tables available and relationship between them.png)
 
 ### Data Modeling
 Overview
