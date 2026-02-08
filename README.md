@@ -77,9 +77,9 @@ data-warehouse-project/
               - Galaxy schema
               - Checks referntial integrity ,whether is maintained or not in the data model(Galaxy Schema) created
 ### 4️⃣ Analytics & Reporting
-       - Sql -based analysis, Exploratory Data analysis
-       - Answering Business KPIs/Problems
-       - Analytical queries optimized for performance
+              - Sql -based analysis, Exploratory Data analysis
+              - Answering Business KPIs/Problems
+              - Analytical queries optimized for performance
 ---
 
 ## 🎯 Skills Demonstrated
