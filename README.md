@@ -9,10 +9,14 @@ This project demonstrates data modelling and analytics in sql using dataset Olis
 ## 📌 Dataset Used Olist Brazillian E-Commerce dataset
 
 The raw data has 9 tables/csv
-1. olist_customers_dataset ingestion           2. olist_geolocation_dataset
-3. olist_order_items_dataset                   4. olist_order_payments_dataset
-5. olist_order_reviews_dataset                 6. olist_orders_dataset
-7. olist_products_dataset                      8. olist_sellers_dataset
+1. olist_customers_dataset ingestion
+2. olist_geolocation_dataset
+3. olist_order_items_dataset
+4. olist_order_payments_dataset
+5. olist_order_reviews_dataset
+6. olist_orders_dataset
+7. olist_products_dataset
+8. olist_sellers_dataset
 9. product_category_name_transalation
 
 ##  Repository Structure
@@ -58,35 +62,24 @@ data-warehouse-project/
 └── requirements.txt                # Dependencies and requirements for the project
 ```
 
-# Olist-Data-Modelling-And-Analytics-SQL
+## 📌 Methodology
 
-# SQL--Data--Warehouse-Project
-Building a modern data warehouse with SQL Server, including ETL processes, data modelling and analytics
-## 📌 Project Overview
-
-This project involves:
-
-### 1️⃣ Data Architecture
-Designing a modern **Medallion Architecture** using:
-- **Bronze** – Raw ingestion layer  
-- **Silver** – Cleaned and transformed data  
-- **Gold** – Business-ready fact and dimension tables  
-
-### 2️⃣ ETL Pipelines
-- Extracting data from source systems  
-- Transforming and cleansing data  
-- Loading curated datasets into analytical tables  
-
-### 3️⃣ Data Modeling
-- Star / constellation schema design  
-- Fact and dimension tables  
-- Surrogate keys & referential integrity  
-
+### 1️⃣ Bronze -Raw Ingestion /Raw Data Loading
+### 2️⃣ Silver -Cleaned and transformed data
+              - Create tables structure for each table.
+              - Loading data from bronze layer in this layer.
+              - Performed quality checks on columns of each tables to know the anomalies transformations needed.
+              - Based on these observations of quality checks
+              - Written a Stored Procedure that takes raw data from bronze 
+              - tranforms data and stores in the table structures created in this layer.
+### 3️⃣ Gold   - Data Modeling 
+              - Business-ready fact and dimension tables in form of views
+              - Galaxy schema
+              - Checks referntial integrity ,whether is maintained or not in the data model(Galaxy Schema) created
 ### 4️⃣ Analytics & Reporting
-- SQL-based analysis
-- Business KPIs
-- Analytical queries optimized for performance  
-
+       - Sql -based analysis, Exploratory Data analysis
+       - Answering Business KPIs/Problems
+       - Analytical queries optimized for performance
 ---
 
 ## 🎯 Skills Demonstrated
@@ -268,38 +261,4 @@ Payment method and installment analysis
 
 The use of a Fact Constellation schema ensures scalability, clarity, and professional-grade data warehouse design.
 
-##  Repository Structure
-
-```text
-datasets/        → Source data
-scripts/         → SQL scripts (ETL, modeling, QA)
-docs/            → Architecture & data dictionary
-tests/           → Data quality checks
-README.md        → Project overview
-
-data-warehouse-project/
-│
-├── datasets/
-│   └── Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/
-│   ├── etl.drawio                  # Project documentation and architecture details
-│   ├── data_architecture.drawio    # Draw.io file showing the project’s architecture
-│   ├── data_catalog.md             # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio            # Draw.io file for the data flow diagram
-│   ├── data_models.drawio          # Draw.io file for data models (star schema)
-│   └── naming_conventions.md       # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/
-│   ├── bronze/                     # Scripts for extracting and loading raw data
-│   ├── silver/                     # Scripts for cleaning and transforming data
-│   └── gold/                       # Scripts for creating analytical models
-│
-├── tests/
-│   └── Test scripts and quality checks
-│
-├── README.md                       # Project overview and instructions
-├── LICENSE                         # License information for the repository
-├── .gitignore                      # Files and directories to be ignored by Git
-└── requirements.txt                # Dependencies and requirements for the project
 
