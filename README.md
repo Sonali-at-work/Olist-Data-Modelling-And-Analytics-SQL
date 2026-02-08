@@ -209,8 +209,7 @@ Problem: Not all customers contribute equally to revenue, but marketing efforts 
 	• Objective: What is the historical lifetime value of customers and which segments generate the most revenue?
 	• Analysis type: LTV calculation
 Insights: 
-	• Example Insight: “Top 20% of customers contribute 75% of total revenue.”
-	
+	<img src="	Docs/LTV.png" width="600" height="500">
 	with t as (select o.customer_key,sum(oi.price)as LTV from gold.fact_orders o  join gold.fact_order_items oi on o.order_id=oi.order_id
 	where order_status='delivered' and customer_key is not null
 	group by o.customer_key )
