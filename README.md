@@ -1,8 +1,5 @@
-<img width="343" height="55" alt="image" src="https://github.com/user-attachments/assets/4ceecd04-2d46-470e-b90d-7161a8281f39" /># Olist-Data-Modelling-And-Analytics-SQL
 
-# SQL--Data--Warehouse-Project
-Building a modern data warehouse with SQL Server, including ETL processes, data modelling and analytics
-# Data Warehouse and Analytics Project 
+# Data Modelling and Analytics Project 
   
 This project demonstrates SQL Development,Dimensional Modeling , Analytics & Reporting  using dataset Olist E-Commerce dataset.
 
@@ -122,28 +119,27 @@ Dimensions store descriptive attributes and use surrogate keys for analytical jo
 
 ### 1. gold.dim_customers
 
-Grain: One row per customer
-
-Surrogate Key: customer_key
-Business Key: customer_id
-Attributes:Customer identifiers, Geographic details (city, state, zip)
-Used by:fact_orders
+- Grain: One row per customer
+- Surrogate Key: customer_key
+- Business Key: customer_id
+- Attributes:Customer identifiers, Geographic details (city, state, zip)
+- Used by:fact_orders
 
 ### 2. gold.dim_products
 
-Grain: One row per product
-Surrogate Key: product_key
-Business Key: product_id
-Attributes:Product category, Physical characteristics (weight, dimensions), Metadata for product analysis
-Used by:fact_order_items
+- Grain: One row per product
+- Surrogate Key: product_key
+- Business Key: product_id
+- Attributes:Product category, Physical characteristics (weight, dimensions), Metadata for product analysis
+- Used by:fact_order_items
 
 ### 3. gold.dim_sellers
 
-Grain: One row per seller
-Surrogate Key: seller_key
-Business Key: seller_id
-Attributes:Seller location, Geographic enrichment using aggregated geolocation data
-Used by:fact_order_items
+- Grain: One row per seller
+- Surrogate Key: seller_key
+- Business Key: seller_id
+- Attributes:Seller location, Geographic enrichment using aggregated geolocation data
+- Used by:fact_order_items
 
 ### Fact Tables
 
@@ -152,35 +148,35 @@ Each fact table maintains a clearly defined grain and references dimensions via 
 
 ## 1. gold.fact_orders
 
-Grain: One row per order
-Purpose: Tracks order lifecycle and delivery performance
-Keys:order_id (degenerate dimension), customer_key (FK to dim_customers)
-Measures / Indicators:Order status, Timestamps (purchase, approval, delivery), Delivery delay flags and duration metrics
-Connected to:Customers, Payments, Reviews, Order items
+- Grain: One row per order
+- Purpose: Tracks order lifecycle and delivery performance
+- Keys:order_id (degenerate dimension), customer_key (FK to dim_customers)
+- Measures / Indicators:Order status, Timestamps (purchase, approval, delivery), Delivery delay flags and duration metrics
+- Connected to:Customers, Payments, Reviews, Order items
 
 ## 2. gold.fact_order_items
 
-Grain: One row per order item
-Purpose: Captures line-level sales and logistics details
-Keys:order_id, order_item_id, product_key (FK), seller_key (FK)
-Measures:Item price, Freight value, Shipping limit date
-This table represents the core sales fact of the model.
+- Grain: One row per order item
+- Purpose: Captures line-level sales and logistics details
+- Keys:order_id, order_item_id, product_key (FK), seller_key (FK)
+- Measures:Item price, Freight value, Shipping limit date
+- This table represents the core sales fact of the model.
 
 ## 3. gold.fact_payments
 
-Grain: One row per payment record per order
-Purpose: Captures payment behavior and methods
-Keys:order_id
-Measures / Attributes:Payment type, Installments, Payment value, Payment sequence
-Connected to:fact_orders via order_id
+- Grain: One row per payment record per order
+- Purpose: Captures payment behavior and methods
+- Keys:order_id
+- Measures / Attributes:Payment type, Installments, Payment value, Payment sequence
+- Connected to:fact_orders via order_id
 
 ## 4. gold.fact_reviews
 
-Grain: One row per review (1 order_id has many reviews in reviews tbl) -- 1:M Relationship
-Purpose: Captures customer feedback and satisfaction
-Keys:review_id, order_id
-Measures / Attributes:Review score, Comments, Review creation and response timestamps
-Connected to: fact_orders via order_id
+- Grain: One row per review (1 order_id has many reviews in reviews tbl) -- 1:M Relationship
+- Purpose: Captures customer feedback and satisfaction
+- Keys:review_id, order_id
+- Measures / Attributes:Review score, Comments, Review creation and response timestamps
+- Connected to: fact_orders via order_id
 
 ### Relationships & Grain Alignment
 
@@ -197,13 +193,13 @@ Surrogate keys are used only in dimensions and facts, never in the Silver layer.
 
 This dimensional model accurately reflects real-world e-commerce processes and supports advanced analytics such as:
 
--Delivery performance analysis
+- Delivery performance analysis
 
-Product and seller performance
+ Product and seller performance
 
--Customer behavior and satisfaction
+- Customer behavior and satisfaction
 
-Payment method and installment analysis
+ Payment method and installment analysis
 
 The use of a Fact Constellation schema ensures scalability, clarity, and professional-grade data warehouse design.
 
