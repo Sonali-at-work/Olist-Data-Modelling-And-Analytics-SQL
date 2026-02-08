@@ -46,12 +46,9 @@ data-warehouse-project/
 │   │    ├──Stored Procedure for data Cleaning .sql
 │   │    ├──Tableas available and reationship between them .png
 │   └── Gold- Data Modelling(Dimension and facts)/                       # Scripts for creating analytical models
-│   │    └──
-│   │    └──
-│   │    └──
-│
-├── tests/
-│   └── Test scripts and quality checks
+│        └──Creating Fact and Dimension Tables .sql
+│        └──Quality checks on the data Model created
+│        └──Schema.png
 │
 ├── README.md                       # Project overview and instructions
 ├── LICENSE                         # License information for the repository
