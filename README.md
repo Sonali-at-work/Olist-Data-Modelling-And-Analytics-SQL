@@ -203,15 +203,13 @@ This dimensional model accurately reflects real-world e-commerce processes and s
 
 The use of a Fact Constellation schema ensures scalability, clarity, and professional-grade data warehouse design.
 
-7️⃣ Business Problems & Insights
+## Business Problems & Insights
+
 2. Customer Lifetime Value (LTV)
+   
 - Problem: Not all customers contribute equally to revenue, but marketing efforts treat them the same. We need to identify high-value customers for loyalty programs and marketing prioritization.
 - Objective: What is the historical lifetime value of customers and which segments generate the most revenue?
-- Analysis type: LTV calculation
-Insights: 
-
-	<img src="Docs/LTV.png" width="600" height="500">
-	
+- Analysis type: LTV calculation	
 ```	
 	with t as (select o.customer_key,sum(oi.price)as LTV 
 	            from gold.fact_orders o 
@@ -224,13 +222,7 @@ Insights:
 	select customer_segment,count(customer_key) as customer_count_in_that_segment
 	,sum(LTV) as revenue_per_segment,round(100 * sum(LTV)/(sum(sum(LTV)) over()),2) as pct_revenue from segmented group by customer_segment
 ```
+Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
 
-Approach:
-Calculated historical LTV using total revenue, purchase frequency, and customer lifespan; segmented customers into high, medium, and low value.
-Insight:
-Top 20% of customers contribute ~75% of total revenue.
-Recommendation:
-Focus retention campaigns and premium services on high-LTV customers while using low-cost automation for low-value segments.<img width="914" height="340" alt="image" src="https://github.com/user-attachments/assets/8db7e40b-b462-47d0-bd69-2f5bbd308354" />
-
-
+	<img src="Docs/LTV.png" width="600" height="500">
 
