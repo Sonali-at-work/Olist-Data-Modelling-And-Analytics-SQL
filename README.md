@@ -311,7 +311,10 @@ select product_category,
          ) AS cumulative_pct
       from t order by revenue_by_product desc
 ```
-<img src="Docs/Regional Sales Analysis.png" width="600" height="500">
+<img src="Docs/Product and Category performance.png" width="600" height="500">
 
-#### Insights:  Based on output screeenshot Sao Paulo and Rio De Janeiro contribute 50 % of total Revenue .
+#### Insights:  Based on output screeenshot Out of 72 categories ,top ~17 categories generate 80% of total revenue.
+#### - business is dependent on few categories. Very few categories drive most revenue: Classic Pareto behavior.
+ 
+.
 
