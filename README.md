@@ -141,12 +141,12 @@ Dimensions store descriptive attributes and use surrogate keys for analytical jo
 - Attributes:Seller location, Geographic enrichment using aggregated geolocation data
 - Used by:fact_order_items
 
-### Fact Tables
+## Fact Tables
 
 Fact tables store transactional and event-level data.
 Each fact table maintains a clearly defined grain and references dimensions via surrogate keys where applicable.
 
-## 1. gold.fact_orders
+### 1. gold.fact_orders
 
 - Grain: One row per order
 - Purpose: Tracks order lifecycle and delivery performance
@@ -154,7 +154,7 @@ Each fact table maintains a clearly defined grain and references dimensions via 
 - Measures / Indicators:Order status, Timestamps (purchase, approval, delivery), Delivery delay flags and duration metrics
 - Connected to:Customers, Payments, Reviews, Order items
 
-## 2. gold.fact_order_items
+### 2. gold.fact_order_items
 
 - Grain: One row per order item
 - Purpose: Captures line-level sales and logistics details
@@ -162,7 +162,7 @@ Each fact table maintains a clearly defined grain and references dimensions via 
 - Measures:Item price, Freight value, Shipping limit date
 - This table represents the core sales fact of the model.
 
-## 3. gold.fact_payments
+### 3. gold.fact_payments
 
 - Grain: One row per payment record per order
 - Purpose: Captures payment behavior and methods
@@ -170,7 +170,7 @@ Each fact table maintains a clearly defined grain and references dimensions via 
 - Measures / Attributes:Payment type, Installments, Payment value, Payment sequence
 - Connected to:fact_orders via order_id
 
-## 4. gold.fact_reviews
+### 4. gold.fact_reviews
 
 - Grain: One row per review (1 order_id has many reviews in reviews tbl) -- 1:M Relationship
 - Purpose: Captures customer feedback and satisfaction
