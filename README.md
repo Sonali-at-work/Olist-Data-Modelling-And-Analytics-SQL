@@ -4,13 +4,61 @@
 Building a modern data warehouse with SQL Server, including ETL processes, data modelling and analytics
 # Data Warehouse and Analytics Project 
   
-This project demonstrates an end-to-end data warehousing and analytics solution, designed as a **portfolio project** showcasing industry best practices in **data engineering, data modeling, and analytics**.
 This project demonstrates data modelling and analytics in sql using dataset Olist E-Commerce dataset.
+
 ## 📌 Dataset Used Olist Brazillian E-Commerce dataset
 
 The raw data has 9 tables/csv
-1.olist_customers_dataset ingestion
----
+1.olist_customers_dataset ingestion           2.olist_geolocation_dataset
+3.olist_order_items_dataset                   4.olist_order_payments_dataset
+5.olist_order_reviews_dataset                 6.olist_orders_dataset
+7.olist_products_dataset                      8.olist_sellers_dataset
+9.product_category_name_transalation
+
+##  Repository Structure
+
+```text
+datasets/        → Source data
+scripts/         → SQL scripts (ETL, modeling, QA)
+docs/            → Architecture & data dictionary
+tests/           → Data quality checks
+README.md        → Project overview
+
+data-warehouse-project/
+│
+├── datasets/
+│   └── Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/
+│   ├── etl.drawio                  # Project documentation and architecture details
+│   ├── data_architecture.drawio    # Draw.io file showing the project’s architecture
+│   ├── data_catalog.md             # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.drawio            # Draw.io file for the data flow diagram
+│   ├── data_models.drawio          # Draw.io file for data models (star schema)
+│   └── naming_conventions.md       # Consistent naming guidelines for tables, columns, and files
+│
+├── SQL scripts/
+│   ├── Bronze- Raw data Loading/                            # Scripts for extracting and loading raw data Data Ingestion Raw Copy
+│   │    ├── DDL_Script_Creating_Tables_and_Loading_Data
+│   ├── Silver- Data Cleaning and Data Standardization/     # Scripts for cleaning and transforming data
+│   │    ├──DDL_Script .sql
+│   │    ├──Script_quality_checks_on_data .sql
+│   │    ├──Stored Procedure for data Cleaning .sql
+│   │    ├──Tableas available and reationship between them .png
+│   └── Gold- Data Modelling(Dimension and facts)/                       # Scripts for creating analytical models
+│   │    └──
+│   │    └──
+│   │    └──
+│
+├── tests/
+│   └── Test scripts and quality checks
+│
+├── README.md                       # Project overview and instructions
+├── LICENSE                         # License information for the repository
+├── .gitignore                      # Files and directories to be ignored by Git
+└── requirements.txt                # Dependencies and requirements for the project
+
+
 
 ## 📌 Project Overview
 
