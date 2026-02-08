@@ -278,7 +278,7 @@ select *,
         100 * revenue/sum(revenue) over () as pct_revenue
         from t order by pct_revenue desc
 ```
-<img src="Docs/Forecasting sales and Revenue.png" width="600" height="500">
+<img src="Docs/Regional Sales Analysis.png" width="600" height="500">
 
-#### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
+#### Insights:  Based on output screeenshot Sao Paulo and Rio De Janeiro contribute 50 % of total Revenue .
 
