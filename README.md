@@ -82,7 +82,7 @@ data-warehouse-project/
                 Data Model
               - Analytical queries optimized for performance
 ---
-### Data Modeling
+## Data Modeling
 <img src="SQL Scripts/Gold- Data Modelling (Dimensions and Facts)/Schema.png" width="600" height="500">
 
 
