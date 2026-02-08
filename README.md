@@ -210,13 +210,14 @@ The use of a Fact Constellation schema ensures scalability, clarity, and profess
 - Analysis type: LTV calculation
 Insights: 
 
-	<img src="	Docs/LTV.png" width="600" height="500">
+	<img src="Docs/LTV.png" width="600" height="500">
 	
-``	
-	with t as (select o.customer_key,sum(oi.price)as LTV from gold.fact_orders o  join gold.fact_order_items oi on o.order_id=oi.order_id
-	where order_status='delivered' and customer_key is not null
+```	
+	with t as (select o.customer_key,sum(oi.price)as LTV 
+	            from gold.fact_orders o 
+	            join gold.fact_order_items oi on o.order_id=oi.order_id
+	            where order_status='delivered' and customer_key is not null
 	group by o.customer_key )
-	
 	,segmented as (
 	select *,ntile(5) over (order by LTV desc) customer_segment from t)
 	
