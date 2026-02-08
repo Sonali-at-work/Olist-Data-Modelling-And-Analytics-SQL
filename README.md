@@ -205,7 +205,7 @@ The use of a Fact Constellation schema ensures scalability, clarity, and profess
 
 ## Business Problems & Insights
 
-2. Customer Lifetime Value (LTV)
+### 2. Customer Lifetime Value (LTV)
    
 - Problem: Not all customers contribute equally to revenue, but marketing efforts treat them the same. We need to identify high-value customers for loyalty programs and marketing prioritization.
 - Objective: What is the historical lifetime value of customers and which segments generate the most revenue?
@@ -222,7 +222,8 @@ The use of a Fact Constellation schema ensures scalability, clarity, and profess
 	select customer_segment,count(customer_key) as customer_count_in_that_segment
 	,sum(LTV) as revenue_per_segment,round(100 * sum(LTV)/(sum(sum(LTV)) over()),2) as pct_revenue from segmented group by customer_segment
 ```
-Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
+<img src="Docs/LTV.png" width="600" height="500">
 
-	<img src="Docs/LTV.png" width="600" height="500">
+#### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
+
 
