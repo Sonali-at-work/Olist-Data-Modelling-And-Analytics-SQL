@@ -332,7 +332,7 @@ select s.seller_state,
          where order_status='delivered' 
       group by s.seller_state
 ```
-<img src=".Docs/delivery Performance Analaysis.png" width="600" height="500">
+<img src=".Docs/delivery Performance Analaysis..png" width="600" height="500">
 
 #### Insights : 
 
