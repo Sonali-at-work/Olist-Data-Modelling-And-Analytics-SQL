@@ -58,7 +58,9 @@ data-warehouse-project/
 └── requirements.txt                # Dependencies and requirements for the project
 
 
-
+## Data Warehouse and Analytics Project 
+  
+This project demonstrates data modelling and analytics in sql using dataset Olist E-Commerce dataset.
 ## 📌 Project Overview
 
 This project involves:
