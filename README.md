@@ -57,10 +57,10 @@ data-warehouse-project/
 ├── .gitignore                      # Files and directories to be ignored by Git
 └── requirements.txt                # Dependencies and requirements for the project
 
+# Olist-Data-Modelling-And-Analytics-SQL
 
-## Data Warehouse and Analytics Project 
-  
-This project demonstrates data modelling and analytics in sql using dataset Olist E-Commerce dataset.
+# SQL--Data--Warehouse-Project
+Building a modern data warehouse with SQL Server, including ETL processes, data modelling and analytics
 ## 📌 Project Overview
 
 This project involves:
