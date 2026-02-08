@@ -215,15 +215,45 @@ The use of a Fact Constellation schema ensures scalability, clarity, and profess
 	            from gold.fact_orders o 
 	            join gold.fact_order_items oi on o.order_id=oi.order_id
 	            where order_status='delivered' and customer_key is not null
-	group by o.customer_key )
+	             group by o.customer_key )
+
 	,segmented as (
 	select *,ntile(5) over (order by LTV desc) customer_segment from t)
 	
-	select customer_segment,count(customer_key) as customer_count_in_that_segment
-	,sum(LTV) as revenue_per_segment,round(100 * sum(LTV)/(sum(sum(LTV)) over()),2) as pct_revenue from segmented group by customer_segment
+	select customer_segment,
+           count(customer_key) as customer_count_in_that_segment
+	       ,sum(LTV) as revenue_per_segment,
+           round(100 * sum(LTV)/(sum(sum(LTV)) over()),2) as pct_revenue
+          from segmented group by customer_segment
 ```
 <img src="Docs/LTV.png" width="600" height="500">
 
 #### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
 
+### 3. Forecasting Orders and Revenue 
+- Problem: Unpredictable demand makes it difficult to plan inventory, staffing, and logistics. Predict future monthly orders and revenue to optimize inventory and staffing.
+- Objective: Support operational planning and supply chain management.
+   
+```	
+with t as (select  year(order_purchase_timestamp) as year ,
+                   month(order_purchase_timestamp)as month,sum(price) as revenue
+                   from gold.fact_orders ojoin gold.fact_order_items oi
+                   on o.order_id=oi.order_id
+                   where order_status='delivered'
+                   group by month(order_purchase_timestamp), year(order_purchase_timestamp) 
+            )
+
+,growth as (select *,
+            lag(revenue) over(order by year,month ) as previous_month_revenue
+                 from t)
+
+select avg(pct_growth_from_previous_month) as growth_rate from (
+                        select *,
+                               (revenue-previous_month_revenue)/NULLIF(previous_month_revenue, 0) as pct_growth_from_previous_month
+                               from growth )s
+
+```
+<img src="Docs/LTV.png" width="600" height="500">
+
+#### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
 
