@@ -85,21 +85,8 @@ data-warehouse-project/
                 Data Model
               - Analytical queries optimized for performance
 ---
-
-## 🎯 Skills Demonstrated
-
-This repository showcases expertise in:
-
-- SQL Development  
-- Data Warehousing  
-- Data Engineering  
-- ETL Pipeline Design  
-- Dimensional Modeling  
-- Analytics & Reporting  
-
 ---
-<img src="SQL Scripts/Silver- Data Cleaning and Data Standardization/Tables available and relationship between them.png" width="600" height="400">
-
+<img src="SQL Scripts/Gold- Data Modelling (Dimensions and Facts)/Schema.png" width="600" height="500">
 
 ### Data Modeling
 Overview
