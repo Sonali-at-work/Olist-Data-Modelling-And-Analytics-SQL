@@ -85,10 +85,10 @@ data-warehouse-project/
                 Data Model
               - Analytical queries optimized for performance
 ---
----
+### Data Modeling
 <img src="SQL Scripts/Gold- Data Modelling (Dimensions and Facts)/Schema.png" width="600" height="500">
 
-### Data Modeling
+
 Overview
 
 The Gold layer follows a dimensional modeling approach optimized for analytical and reporting use cases.
@@ -100,19 +100,19 @@ Clear separation of business entities (dimensions) and measurable events (facts)
 
 ## Design Principles Applied In Data Modelling
 
--Clear grain definition for every fact table.
--Surrogate keys used for analytical stability.
--Business keys preserved for traceability.
--No dimension-to-dimension joins.
--Referential integrity validated via data quality checks
--Optimized for BI tools and SQL-based analytics
+- Clear grain definition for every fact table.
+- Surrogate keys used for analytical stability.
+- Business keys preserved for traceability.
+- No dimension-to-dimension joins.
+- Referential integrity validated via data quality checks
+- Optimized for BI tools and SQL-based analytics
 
 ### Schema Type
 
 Fact Constellation (Galaxy Schema)
 The model contains:
--3 Dimension tables
--4 Fact tables
+- 3 Dimension tables
+- 4 Fact tables
 
 Shared dimensions reused across multiple facts
 This is intentionally not a single star schema, because the business processes operate at different granularities.
