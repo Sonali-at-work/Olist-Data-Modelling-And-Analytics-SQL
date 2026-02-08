@@ -5,7 +5,11 @@ Building a modern data warehouse with SQL Server, including ETL processes, data 
 # Data Warehouse and Analytics Project 
   
 This project demonstrates an end-to-end data warehousing and analytics solution, designed as a **portfolio project** showcasing industry best practices in **data engineering, data modeling, and analytics**.
+This project demonstrates data modelling and analytics in sql using dataset Olist E-Commerce dataset.
+## 📌 Dataset Used Olist Brazillian E-Commerce dataset
 
+The raw data has 9 tables/csv
+1.olist_customers_dataset ingestion
 ---
 
 ## 📌 Project Overview
