@@ -313,8 +313,9 @@ select product_category,
 ```
 <img src="Docs/Product and Category performance.png" width="600" height="500">
 
-#### Insights:  Based on output screeenshot Out of 72 categories ,top ~17 categories generate 80% of total revenue.
-#### - business is dependent on few categories. Very few categories drive most revenue: Classic Pareto behavior.
+#### Insights:  Based on output column cumulative_pct in screeenshot Out of 72 categories ,top 18 categories 
+####            generate 80% of total revenue.
+### - Classic Pareto behavior: business is dependent on few categories. Very few categories drive most revenue.
 
 
 ### 6. Delivery Performance Analysis
