@@ -266,7 +266,7 @@ select *,
         100 * revenue/sum(revenue) over () as pct_revenue
         from t order by pct_revenue desc
 ```
-<img src="Docs/Regional Sales Analysis.png" width="600" height="500">
+<img src="Docs/output Screenshot- Regional Sales Analysis.png" width="600" height="500">
 
 #### Insights:  Based on output screeenshot Sao Paulo and Rio De Janeiro contribute 50 % of total Revenue .
 #### Optimize marketing campaigns and logistics in Sao Paulo and Rio De Janeiro will hellp increase in revenue 
