@@ -28,7 +28,7 @@ README.md        → Project overview
 data-warehouse-project/
 │
 ├── datasets/
-│   └── Raw datasets used for the project (ERP and CRM data)
+│   └── Raw datasets used for the project.
 │
 ├── docs/
 │   ├── etl.drawio                  # Project documentation and architecture details
