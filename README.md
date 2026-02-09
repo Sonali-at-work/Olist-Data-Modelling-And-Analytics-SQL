@@ -301,7 +301,7 @@ select product_category,
          ) AS cumulative_pct
       from t order by revenue_by_product desc
 ```
-<img src="Docs/Product and category performance..png" width="600" height="500">
+<img src="Docs/output Screenshot- Product and category performance..png" width="600" height="500">
 
 #### Insights:  Based on output column cumulative_pct in screeenshot Out of 72 categories ,top 18 categories 
 ####            generate 80% of total revenue.
