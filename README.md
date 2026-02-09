@@ -328,7 +328,7 @@ where order_status = 'delivered'
 group by s.seller_state
 order by late_pct desc;
 ```
-<img src="Docs/Delivery Performance Analysis ..png" width="600" height="500">
+<img src="Docs/output Screenshot- Delivery Performance Analysis ..png" width="600" height="500">
 
 #### Insights : 
 #### • MA shows highest late rate (23%), but low order volume (168) → low business impact
