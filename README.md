@@ -32,12 +32,10 @@ data-warehouse-project/
 │
 ├── docs/
 │   ├── Tables available and relationship between them.drawio
-│   ├── Galaxy Schema.drawio        # Project documentation and architecture details
 │   ├── output Screenshot of sql queries.drawio    # Draw.io file showing the project’s architecture
 │   ├── data_catalog.md             # Catalog of datasets, including field descriptions and metadata
 │   ├── data_flow.drawio            # Draw.io file for the data flow diagram
-│   ├── data_models.drawio          # Draw.io file for data models (star schema)
-│   └── naming_conventions.md       # Consistent naming guidelines for tables, columns, and files
+│   └── data_models.drawio          # Draw.io file for data models (Galaxy schema)
 │
 ├── SQL scripts/
 │   ├── Bronze- Raw data Loading/                        # Scripts for extracting and loading raw data/ Data Ingestion 
