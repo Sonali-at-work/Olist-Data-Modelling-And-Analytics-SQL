@@ -39,16 +39,16 @@ data-warehouse-project/
 │   └── naming_conventions.md       # Consistent naming guidelines for tables, columns, and files
 │
 ├── SQL scripts/
-│   ├── Bronze- Raw data Loading/                            # Scripts for extracting and loading raw data Data Ingestion Raw Copy
+│   ├── Bronze- Raw data Loading/                        # Scripts for extracting and loading raw data/ Data Ingestion 
 │   │    └── DDL_Script_Creating_Tables_and_Loading_Data
 │   │
-│   ├── Silver- Data Cleaning and Data Standardization/     # Scripts for cleaning and transforming data
+│   ├── Silver- Data Cleaning and Data Standardization/  # Scripts for cleaning and transforming data
 │   │    ├──DDL_Script .sql
 │   │    ├──Script_quality_checks_on_data .sql
 │   │    ├──Stored Procedure for data Cleaning .sql
 │   │    └──Tableas available and reationship between them .png
 │   │
-│   └── Gold- Data Modelling(Dimension and facts)/                       # Scripts for creating analytical models
+│   └── Gold- Data Modelling(Dimension and facts)/      # Scripts for creating analytical models
 │        ├──Creating Fact and Dimension Tables .sql
 │        ├──Quality checks on the data Model created
 │        └──Schema.png
@@ -189,20 +189,7 @@ Order items connect products and sellers at the most detailed transactional leve
 Dimensions are never joined directly to each other — joined only through facts.
 Surrogate keys are used only in dimensions and facts, never in the Silver layer.
 
-## Summary
-
-This dimensional model accurately reflects real-world e-commerce processes and supports advanced analytics such as:
-
-- Delivery performance analysis
-
- Product and seller performance
-
-- Customer behavior and satisfaction
-
- Payment method and installment analysis
-
-The use of a Fact Constellation schema ensures scalability, clarity, and professional-grade data warehouse design.
-
+## Using created Model to answer : 
 ## Business Problems & Insights
 
 ### 2. Customer Lifetime Value (LTV)
@@ -228,7 +215,8 @@ The use of a Fact Constellation schema ensures scalability, clarity, and profess
 ```
 <img src="Docs/LTV.png" width="600" height="500">
 
-#### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
+#### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.These
+#### customers are ideal for loyalty programs and marketing prioritization
 
 ### 3. Forecasting Orders and Revenue 
 - Problem: Unpredictable demand makes it difficult to plan inventory, staffing, and logistics. Predict future monthly orders and revenue to optimize inventory and staffing.
@@ -281,6 +269,8 @@ select *,
 <img src="Docs/Regional Sales Analysis.png" width="600" height="500">
 
 #### Insights:  Based on output screeenshot Sao Paulo and Rio De Janeiro contribute 50 % of total Revenue .
+#### Optimize marketing campaigns and logistics in Sao Paulo and Rio De Janeiro will hellp increase in revenue 
+#### Moreover the one's that are behind could also be made more inclusive in revenue generation.
 
 ### 5. Product & Category Performance
 - Problem: Identify best-selling products and categories, and products with high returns or low reviews.
@@ -348,8 +338,7 @@ order by late_pct desc;
 #### Business Recommendation:
 
 #### • Focus logistics optimization on SP warehouses
-#### • Investigate seller SLA compliance in RJ/PR
-#### • Ignore low-volume states for now
+#### • We can further investigate seller SLA compliance in RJ/PR
 
 ### 7. Impact of Delivery on Customer Satisfaction
 - Problem: Does delivery delay affect customer review scores?
