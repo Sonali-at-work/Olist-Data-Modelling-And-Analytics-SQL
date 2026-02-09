@@ -241,7 +241,7 @@ select avg(pct_growth_from_previous_month) as growth_rate from (
                                from growth )s
 
 ```
-<img src="Docs/Forecasting sales and Revenue.png" width="300" height="300">
+<img src="Docs/output Screenshot- Forecasting sales and Revenue.png" width="300" height="300">
 
 #### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
 
