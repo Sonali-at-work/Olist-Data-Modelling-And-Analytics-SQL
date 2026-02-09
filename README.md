@@ -378,7 +378,7 @@ select category_days_late ,
        group by category_days_late
        order by avg(_score) asc
 ```
-<img src="Docs/Impact Of delivery on performance.png" width="600" height="500">
+<img src="Docs/output Screenshot- Impact Of delivery on performance.png" width="600" height="500">
 
 #### Insights : Negative correlation “Customer satisfaction declines sharply with delivery delays.
 #### Orders delivered on time receive an average rating of 4, while highly delayed deliveries receive only 1.
