@@ -340,15 +340,15 @@ order by late_pct desc;
 <img src="Docs/Delivery Performance Analysis ..png" width="600" height="500">
 
 #### Insights : 
-• MA shows highest late rate (23%), but low order volume (168) → low business impact
-• SP contributes 2,567 late deliveries (largest absolute number) → primary bottleneck
-• RJ and PR also show moderate delays with high volume
+#### • MA shows highest late rate (23%), but low order volume (168) → low business impact
+#### • SP contributes 2,567 late deliveries (largest absolute number) → primary bottleneck
+#### • RJ and PR also show moderate delays with high volume
 
-Business Recommendation:
+#### Business Recommendation:
 
-• Focus logistics optimization on SP warehouses
-• Investigate seller SLA compliance in RJ/PR
-• Ignore low-volume states for now
+#### • Focus logistics optimization on SP warehouses
+#### • Investigate seller SLA compliance in RJ/PR
+#### • Ignore low-volume states for now
 
 ### 7. Impact of Delivery on Customer Satisfaction
 - Problem: Does delivery delay affect customer review scores?
