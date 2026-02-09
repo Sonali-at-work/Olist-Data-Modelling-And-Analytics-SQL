@@ -253,7 +253,7 @@ select avg(pct_growth_from_previous_month) as growth_rate from (
                                from growth )s
 
 ```
-<img src="Docs/Forecasting sales and Revenue.png" width="600" height="500">
+<img src="Docs/Forecasting sales and Revenue.png" width="300" height="300">
 
 #### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.
 
@@ -311,7 +311,7 @@ select product_category,
          ) AS cumulative_pct
       from t order by revenue_by_product desc
 ```
-<img src="Docs/Product and Category performance.png" width="600" height="500">
+<img src="Docs/Product and category performance..png" width="600" height="500">
 
 #### Insights:  Based on output column cumulative_pct in screeenshot Out of 72 categories ,top 18 categories 
 ####            generate 80% of total revenue.
