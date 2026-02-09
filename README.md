@@ -213,7 +213,7 @@ Surrogate keys are used only in dimensions and facts, never in the Silver layer.
            round(100 * sum(LTV)/(sum(sum(LTV)) over()),2) as pct_revenue
           from segmented group by customer_segment
 ```
-<img src="Docs/LTV.png" width="600" height="500">
+<img src="Docs/output Screenshot- LTV.png" width="600" height="500">
 
 #### Insights: Ntile divided customers into 5 segments each having 20 % customers. Based on output screeenshot 20% of customers contribute to ~ 56 % of total revenue.These
 #### customers are ideal for loyalty programs and marketing prioritization
