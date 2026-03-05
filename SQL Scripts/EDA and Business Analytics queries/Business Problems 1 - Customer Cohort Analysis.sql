@@ -5,7 +5,7 @@
 --	• Objective: Track retention and repeat purchase patterns.
 --	• Dataset: orders, customers 
 --	• Analysis type: Cohort analysis & retention
---	• Example Insight: “Customers acquired in January 2025 show 40% repeat purchases after 3 months.”
+
 	
 	select * ,datediff(month,first_order,order_purchase_timestamp) as rp from(
 	select customer_key,order_purchase_timestamp,
@@ -21,3 +21,4 @@
 	
 	select *,case when order_count >=2 then 'Y' else 'N' end as Retention from t
 	
+
