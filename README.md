@@ -34,7 +34,6 @@ data-warehouse-project/
 │   ├── Tables available and relationship between them.drawio
 │   ├── output Screenshot of sql queries.drawio    # Draw.io file showing the project’s architecture
 │   ├── data_catalog.md             # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio            # Draw.io file for the data flow diagram
 │   └── data_models.drawio          # Draw.io file for data models (Galaxy schema)
 │
 ├── SQL scripts/
@@ -50,6 +49,7 @@ data-warehouse-project/
 │   └── Gold- Data Modelling(Dimension and facts)/      # Scripts for creating analytical models
 │        ├──Creating Fact and Dimension Tables .sql
 │        ├──Quality checks on the data Model created
+│        ├──EDA and Business Analytics queries
 │        └──Schema.png
 │
 ├── README.md                       # Project overview and instructions
