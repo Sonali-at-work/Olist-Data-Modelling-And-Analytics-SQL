@@ -1,12 +1,12 @@
 --Answering business problems using the Olist Data Warehouse dataset
 
 
-9. Impact of Delivery on Customer Satisfaction
-Problem: Does delivery delay affect customer review scores?
-	• Objective: Correlate operational performance with customer satisfaction.
-	• Dataset: orders, reviews
-	• Analysis type: Correlation analysis
-	• Example Insight: “Orders delayed >7 days receive 1.5 points lower on average in reviews.”
+--9. Impact of Delivery on Customer Satisfaction
+--Problem: Does delivery delay affect customer review scores?
+--	• Objective: Correlate operational performance with customer satisfaction.
+--	• Dataset: orders, reviews
+--	• Analysis type: Correlation analysis
+--	• Example Insight: “Orders delayed >7 days receive 1.5 points lower on average in reviews.”
 WITH review_per_order AS (
     SELECT 
         order_id,
@@ -35,6 +35,7 @@ as category_days_late ,_score from t)
 
 select category_days_late ,avg(_score)as review_score from category group by category_days_late order by avg(_score) asc
 
-Negative correlation
-“Customer satisfaction declines sharply with delivery delays. Orders delivered on time receive an average rating of 4, while highly delayed deliveries receive only 1. Each delay bucket reduces ratings by ~1 point.”
+--Negative correlation
+--“Customer satisfaction declines sharply with delivery delays. Orders delivered on time receive an average rating of 4, while highly delayed deliveries receive only 1. Each delay bucket reduces ratings by ~1 point.”
+
 
