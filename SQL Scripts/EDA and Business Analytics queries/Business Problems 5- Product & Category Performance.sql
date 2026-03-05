@@ -31,17 +31,6 @@ from t order by revenue_by_product desc
 
 
 
--- Top ~17 categories generate 80% of total revenue
---This is the key business insight.
-
---?? Business interpretation (this is what matters)
---? Insight 1 — Revenue concentration
---Very few categories drive most revenue:
---~20% categories ? 80% revenue
-
---Classic Pareto behavior.
---Meaning:
---?? business is dependent on few categories
 
 
 
