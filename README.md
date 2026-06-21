@@ -1,21 +1,8 @@
-
 # Data Modelling and Analytics Project 
-  # Data Modelling and Analytics Project 
 
 This project demonstrates SQL Development,Dimensional Modeling , Analytics & Reporting  using dataset Olist E-Commerce dataset.
 
 ## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-## 📌 Dataset Used Olist Brazillian E-Commerce dataset
-
 
 The raw data has 9 tables/csv
 1. olist_customers_dataset ingestion
