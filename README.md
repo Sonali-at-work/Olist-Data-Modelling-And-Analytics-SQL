@@ -5,17 +5,6 @@ This project demonstrates SQL Development,Dimensional Modeling , Analytics & Rep
 ## 📌 Dataset Used Olist Brazillian E-Commerce dataset
 
 The raw data has 9 tables/csv
-The raw data has 9 tables/csv
-The raw data has 9 tables/csvThe raw data has 9 tables/csv
-
-The raw data has 9 tables/csvThe raw data has 9 tables/csv
-
-The raw data has 9 tables/csv
-The raw data has 9 tables/csv
-The raw data has 9 tables/csv
-
-The raw data has 9 tables/csv
-
 1. olist_customers_dataset ingestion
 2. olist_geolocation_dataset
 3. olist_order_items_dataset
