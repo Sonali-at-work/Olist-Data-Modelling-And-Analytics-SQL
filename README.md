@@ -9,6 +9,7 @@ The raw data has 9 tables/csv
 The raw data has 9 tables/csv
 The raw data has 9 tables/csv
 The raw data has 9 tables/csv
+The raw data has 9 tables/csv
 
 
 1. olist_customers_dataset ingestion
