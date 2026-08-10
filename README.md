@@ -6,16 +6,14 @@ This project demonstrates SQL Development,Dimensional Modeling , Analytics & Rep
 
 The raw data has 9 tables/csv
 1. olist_customers_dataset ingestion
-2. 1. olist_customers_dataset ingestion
-
-3. olist_geolocation_dataset
-4. olist_order_items_dataset
-5. olist_order_payments_dataset
-6. olist_order_reviews_dataset
-7. olist_orders_dataset
-8. olist_products_dataset
-9. olist_sellers_dataset
-10. product_category_name_transalation
+2. olist_geolocation_dataset
+3. olist_order_items_dataset
+4. list_order_payments_dataset
+5. list_order_reviews_dataset
+6. olist_orders_dataset
+7. olist_products_dataset
+8. olist_sellers_dataset
+9. product_category_name_transalation
 
 ##  Repository Structure
 
