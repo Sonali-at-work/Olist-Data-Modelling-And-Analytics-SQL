@@ -1,6 +1,7 @@
 # Data Modelling and Analytics Project 
 
 This project demonstrates SQL Development,Dimensional Modeling , Analytics & Reporting  using dataset Olist E-Commerce dataset.
+This project demonstrates SQL Development,Dimensional Modeling , Analytics & Reporting  using dataset Olist E-Commerce dataset.
 
 ## 📌 Dataset Used Olist Brazillian E-Commerce dataset
 
